@@ -17,5 +17,5 @@ so now that our market researcher has the data in an easy to use format like a s
 Power Point presentations are extremely limiting and oftentimes boring. Now, rather than taking her word at face value, the key stakeholders and decision makers can quickly and very easily look at the relevant data themselves and select the types of visualizations that appeal most to them.
 ## Screenshots
 
-![App Screenshot](https://github.com/SwTilak/Tweet-Analysis/blob/master/Web%20capture_22-11-2021_175950_airlinetweets.herokuapp.com.jpeg)
+![App Screenshot](https://github.com/SwTilak/Tweet-Analysis/blob/master/images/image)
 
