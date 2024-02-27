@@ -8,10 +8,10 @@ import numpy as np
 import plotly.express as px
 from wordcloud import WordCloud, STOPWORDS
 
-st.title("Sentiment Analysis of tweets about US Airlines")
+st.title("Sentiment Analysis dari Social Media Angkasa Pura 2 ")
 st.sidebar.title("Sentiment Analysis")
-st.markdown("This application is used to analyzed the sentiment of the Tweets ✈️")
-st.sidebar.markdown("This application is used to analyzed the sentiment of the Tweets ✈️")
+st.markdown("Analisa Sentimen terkait Pelayanan Bandara-Bandara di bawah naungan Angkasa Pura 2 ✈️")
+st.sidebar.markdown("Analisa Sentimen terkait Pelayanan Bandara-Bandara di bawah naungan Angkasa Pura 2 ✈️")
 
 
 @st.cache(persist=True)
