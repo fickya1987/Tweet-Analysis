@@ -16,7 +16,7 @@ st.sidebar.markdown("This application is used to analyzed the sentiment of the T
 
 @st.cache(persist=True)
 def load_data():
-    data = pd.read_csv("Tweets.csv")
+    data = pd.read_csv("tweet_trial.csv")
     data['tweet_created'] = pd.to_datetime(data['tweet_created'])
     return data
 
