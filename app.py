@@ -22,37 +22,37 @@ def load_data():
 
 
 data = load_data()
-st.sidebar.subheader("Show Random Tweet")
+st.sidebar.subheader("Social Media Comment")
 random_tweet = st.sidebar.radio("Sentiment Type", ('positive', 'neutral', 'negative'))
 st.sidebar.markdown(data.query('airline_sentiment == @random_tweet')[["text"]].sample(n=1).iat[0, 0])
-st.sidebar.markdown("### number of tweets by sentiment")
+st.sidebar.markdown("### Comment dan Sentiment")
 select = st.sidebar.selectbox('Visual Type', ['Histogram', 'piechart'], key=1)
 
 sentiment_count = data['airline_sentiment'].value_counts()
 sentiment_count = pd.DataFrame({'sentiment': sentiment_count.index, 'Tweets': sentiment_count.values})
 
 if not st.sidebar.checkbox("Hide", True):
-    st.markdown("### Number of Tweets by sentiment")
+    st.markdown("### Jumlah Comment terhadap sentimen")
     if select == "Histogram":
-        fig = px.bar(sentiment_count, x="sentiment", y="Tweets", color="Tweets", height=500)
+        fig = px.bar(sentiment_count, x="sentiment", y="Comment", color="Tweets", height=500)
         st.plotly_chart(fig)
     else:
         fig = px.pie(sentiment_count, values='Tweets', names='sentiment')
         st.plotly_chart(fig)
 
-st.sidebar.subheader("location and time of Tweet")
-hour = st.sidebar.slider('Hour of Day', 0, 23)
+st.sidebar.subheader("Waktu dan Lokasi Comment")
+hour = st.sidebar.slider('Jam per hari', 0, 23)
 modified_data = data[data['tweet_created'].dt.hour == hour]
 if not st.sidebar.checkbox('close', True, key=1):
-    st.markdown('Tweet location based on time of day')
+    st.markdown('Lokasi Comment dan Sentimen berdasarkan waktu')
     st.markdown("%i tweets between %i:00 and %i:00" % (len(modified_data), hour, (hour + 1) % 24))
     st.map(modified_data)
     if st.sidebar.checkbox("show raw data", False):
         st.write(modified_data)
 
-st.sidebar.subheader("Breakdown airlines tweets by sentiment")
-choice = st.sidebar.multiselect("pick Airlines",
-                                ('US Airways', 'United', 'American', 'Southeast', 'Delta', 'Virgin America'), key='0')
+st.sidebar.subheader("Pembagian comment dan sentimen")
+choice = st.sidebar.multiselect(Pilih Bandara",
+                                ('Soekarno Hatta', 'Kualanamu', 'Supadio'), key='0')
 
 if len(choice) > 0:
     choice_data = data[data.airline.isin(choice)]
