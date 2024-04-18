@@ -51,7 +51,7 @@ if not st.sidebar.checkbox('close', True, key=1):
         st.write(modified_data)
 
 st.sidebar.subheader("Pembagian comment dan sentimen")
-choice = st.sidebar.multiselect("Pilih Bandara",
+choice = st.sidebar.multiselect('Pilih Bandara',
                                 ('Soekarno-Hatta', 'Kualanamu', 'Supadio'), key='0')
 
 if len(choice) > 0:
