@@ -34,7 +34,7 @@ sentiment_count = pd.DataFrame({'sentiment': sentiment_count.index, 'Tweets': se
 if not st.sidebar.checkbox("Hide", True):
     st.markdown("### Jumlah Comment terhadap sentimen")
     if select == "Histogram":
-        fig = px.bar(sentiment_count, x="sentiment", y="Comment", color="Tweets", height=500)
+        fig = px.bar(sentiment_count, x="sentiment", y="Tweets", color="Tweets", height=500)
         st.plotly_chart(fig)
     else:
         fig = px.pie(sentiment_count, values='Tweets', names='sentiment')
