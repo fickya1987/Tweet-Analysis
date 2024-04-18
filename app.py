@@ -52,7 +52,7 @@ if not st.sidebar.checkbox('close', True, key=1):
 
 st.sidebar.subheader("Pembagian comment dan sentimen")
 choice = st.sidebar.multiselect("Pilih Bandara",
-                                ('Bandar Udara Internasional Soekarno-Hatta ', 'Bandar Udara Internasional Kualanamu (Kota Medan, Sumatera Utara)', 'Bandar Udara Supadio (Kota Pontianak, Kalimantan Barat)'), key='0')
+                                ('Soekarno-Hatta', 'Kualanamu', 'Supadio'), key='0')
 
 if len(choice) > 0:
     choice_data = data[data.airline.isin(choice)]
