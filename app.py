@@ -16,7 +16,7 @@ st.sidebar.markdown("Analisa Sentimen terkait Pelayanan Bandara-Bandara di bawah
 
 @st.cache(persist=True)
 def load_data():
-    data = pd.read_csv("tweet_trial_01.csv")
+    data = pd.read_csv("tweet_trial.csv")
     data['tweet_created'] = pd.to_datetime(data['tweet_created'])
     return data
 
